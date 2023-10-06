@@ -1,19 +1,23 @@
 #include <stdio.h>
 
-int main(void) {
-	int year;
-	
-	
-	printf("INPUT year  : ");
-	scanf_s("%i", &year);
+int main(void){
+		unsigned int x; 
+		int b;
 
-	if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
-		printf("LEAP YEAR");
-	else
-		printf("NOT leap year");
+		printf("input a number : ");
+		scanf_s("%ui", &x);
 
-	
-	return 0; 
+		for (b = 0; x != 0; x >>=1 )
+		{
+			if (x & 1) {
+				b++;
+			}
+		}
+		printf("The result is : %i\n", b);
+
+		return 0;
+
+
 	
 
 }
