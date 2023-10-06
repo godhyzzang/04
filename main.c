@@ -1,16 +1,17 @@
 #include <stdio.h>
 
 int main(void) {
-	int input_s;
-	int m, s;
+	int year;
 	
-	printf("INPUT sec  : ");
-	scanf_s("%i", &input_s);
-	s = input_s % 60;
-	m = input_s / 60;
 	
+	printf("INPUT year  : ");
+	scanf_s("%i", &year);
 
-	printf("%i m : %i s \n",m,s);
+	if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
+		printf("LEAP YEAR");
+	else
+		printf("NOT leap year");
+
 	
 	return 0; 
 	
